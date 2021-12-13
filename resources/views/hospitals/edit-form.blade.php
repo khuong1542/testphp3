@@ -24,7 +24,7 @@
                             @error('logo')
                             <span class="text-danger">{{$message}}</span>
                             @enderror
-                            <img src="{{old('logo', $model->logo)}}" alt="">
+                            <img src="{{old('logo', $model->logo)}}" width="100" alt="Image Hospital">
                         </div>
                         <div class="form-group">
                             <label for="">Founding Year</label>

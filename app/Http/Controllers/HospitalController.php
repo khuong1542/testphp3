@@ -41,7 +41,7 @@ class HospitalController extends Controller
     {
         $model = new Hospital();
         if($request->hasFile('logo')){
-            $logo = $request->file('logo')->store('hospital');
+            $logo = $request->file('logo')->store('hospital_image');
             $filename = str_replace('public/', '', $logo);
             $model->logo = $filename;
         }
@@ -88,7 +88,7 @@ class HospitalController extends Controller
         }
         if($request->hasFile('logo')){
             Storage::delete($model->logo);
-            $logo = $request->file('logo')->store('hospital');
+            $logo = $request->file('logo')->store('hospital_image');
             $filename = str_replace('public/', '', $logo);
             $model->logo = $filename;
         }
